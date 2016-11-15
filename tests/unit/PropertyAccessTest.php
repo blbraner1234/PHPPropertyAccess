@@ -34,4 +34,30 @@ class PropertyAccessTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('John.Doe@email.com', $person->email);
     }
+
+    /**
+     * @test
+     */
+    public function it_can_still_set_non_existant_properties_that_dont_have_methods()
+    {
+        $this->address = '123 test street';
+
+        $this->assertEquals('123 test street', $this->address);
+    }
+
+    /**
+     * @test
+     */
+    public function it_can_check_if_value_is_set()
+    {
+
+        $person = new TestClass();
+        $person->first_name = 'John';
+        $person->last_name  = 'Doe';
+
+        $this->assertTrue(isset($person->first_name));
+        $this->assertTrue(isset($person->last_name));
+        $this->assertTrue(isset($person->email));
+
+    }
 }

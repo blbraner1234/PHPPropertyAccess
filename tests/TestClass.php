@@ -11,8 +11,8 @@ class TestClass
 {
     use PropertyAccess;
 
-    public $first_name;
-    public $last_name;
+//    public $first_name;
+//    public $last_name;
 
     /**
      * @property
