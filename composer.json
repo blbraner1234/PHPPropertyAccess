@@ -1,0 +1,24 @@
+{
+    "name": "teleiosis/property_access",
+    "description": "Use calls methods as properties in PHP",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^5.6",
+        "mockery/mockery": "^0.9.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "teleiosis\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Brandon Braner",
+            "email": "brandon.braner@teleiosis.com"
+        }
+    ],
+    "require": {
+        "zeptech/annotations": "^1.1"
+    }
+}
