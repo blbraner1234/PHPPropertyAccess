@@ -11,7 +11,7 @@ This is setup to mimic using Python's @property decorator
 Lets say you have a User class that want to be able to set the firstName, lastName, and email on.
 You want to be able to automaticlly construct the email from the firstName.lastName@example.com
 Normally you would have something such as the example below
-'''php
+```php
 <?php
 
 class User
@@ -35,13 +35,12 @@ class User
 
 $user = new User('John', 'Doe');
 echo $user->email(); //John.Doe@example.com
-
-'''
+```
 
 However what if you want to be able to access the email address as a property? 
 By annotating the method call with @property you can do just that.
 
-'''php
+```php
 <?php
 
 //require composer autoloader
@@ -74,7 +73,7 @@ class User
 
 $user = new User('John', 'Doe');
 echo $user->email; //John.Doe@example.com
-'''
+```
 
 ## Installation
 
