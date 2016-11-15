@@ -60,4 +60,16 @@ class PropertyAccessTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(isset($person->email));
 
     }
+
+    /**
+     * @test
+     */
+    public function it_can_take_an_array_as_value()
+    {
+        $person = new TestClass();
+        $returnValue = $person->methodWithArgs = ['arg1' => 'John', 'arg2' => 'Doe'];
+
+        $this->assertContains('John', $returnValue);
+        $this->assertContains('Doe', $returnValue);
+    }
 }

@@ -54,5 +54,18 @@ class TestClass
        return $this->first_name . '.' . $this->last_name . '@email.com';
     }
 
+    /**
+     * @property
+     *
+     * @param $name
+     * @param $value
+     *
+     * @return string
+     */
+    public function methodWithArgs($name, $value)
+    {
+        return "{$value['arg1']} arg2: {$value['arg2']}";
+    }
+
 
 }
