@@ -75,9 +75,42 @@ $user = new User('John', 'Doe');
 echo $user->email; //John.Doe@example.com
 ```
 
+You can also pass an array as arguments for your decorated methods
+
+```
+<?php
+
+//require composer autoloader
+require 'vendor/autoload.php';
+
+//include the trait
+use teleiosis\PropertyAccess\traits\PropertyAccess;
+class User
+{
+    use PropertyAccess;
+
+    /**
+    *@property
+    */
+    public function email($args = array())
+    {
+        return "{$args['firstName']}.{$args['lastName']}@example.com";
+    }    
+
+}
+
+$user = new User();
+$user->email = ['firstName' => 'John', 'lastName' => 'Doe'];
+echo $user->email; //John.Doe@example.com
+```
+
 ## Installation
 
-Install with composer, more details coming soon.
+Install with composer
+
+```
+composer require teleiosis/property_access
+```
 
 ## Tests
 
