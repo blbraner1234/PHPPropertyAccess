@@ -77,7 +77,7 @@ echo $user->email; //John.Doe@example.com
 
 You can also pass an array as arguments for your decorated methods
 
-```
+```php
 <?php
 
 //require composer autoloader
