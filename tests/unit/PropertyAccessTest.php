@@ -5,7 +5,7 @@ class PropertyAccessTest extends PHPUnit_Framework_TestCase
 {
 
     /**
-     * @tes
+     * @test
      */
     public function it_can_set_nonexistant_property_via_function()
     {
